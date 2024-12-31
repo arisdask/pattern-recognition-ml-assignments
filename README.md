@@ -1,5 +1,3 @@
-# Project Name
-
 ## Overview
 
 This is the project assignment for the course Pattern Recognition and Machine Learning of ECE AUTH the year
