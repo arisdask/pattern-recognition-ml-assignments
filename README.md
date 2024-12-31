@@ -26,7 +26,7 @@ git clone git@github.com:georrous6/Pattern-Recognition.git
 
 Create a new Anaconda environment with all the installed requirements along with the appropriate Python version
 ```bash
-$ conda create --name PRenv python=3.9.12 --file requirements.txt
+conda create --name PRenv --file requirements.txt
 ```
 
 Activate the environment
