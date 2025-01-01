@@ -24,6 +24,7 @@ git clone git@github.com:georrous6/Pattern-Recognition.git
 
 Create a new Anaconda environment with all the installed requirements along with the appropriate Python version
 ```bash
+cd Pattern-Recognition
 conda env create -f environment.yml
 ```
 
@@ -35,4 +36,12 @@ conda activate PRenv
 When you're done working in the environment, you can deactivate it by running
 ```bash
 conda deactivate
+```
+
+### 3. Version Control with Jupyter Notebook
+
+To clear Jupyter Notebook's output and metadata when using git commit add this to your local .git/config
+```bash
+[filter "strip-notebook-output"]
+clean = "nbstripout"
 ```
