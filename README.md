@@ -22,9 +22,13 @@ git clone git@github.com:georrous6/Pattern-Recognition.git
 
 ### 2. Set Up Anaconda Environment
 
-Create a new Anaconda environment with all the installed requirements along with the appropriate Python version
+Navigate to the directory of the repository
 ```bash
 cd Pattern-Recognition
+```
+
+Create a new Anaconda environment with all the installed requirements along with the appropriate Python version
+```bash
 conda env create -f environment.yml
 ```
 
