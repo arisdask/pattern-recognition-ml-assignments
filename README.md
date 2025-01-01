@@ -1,14 +1,14 @@
 ## Overview
 
 This is the project assignment for the course Pattern Recognition and Machine Learning of ECE AUTH the year
-2024-25, built with **Python** and **Jupyter Notebook**
+2024-25, built with `Python` and `Jupyter Notebook`
 
 ## Requirements
 
 Before running the project, make sure you have the following installed:
 
-- **Python 3.9.12** 
-- **Anaconda** (Recommended for Python environments)
+- `Python 3.9.12` 
+- `Anaconda` (Recommended for Python environments)
 
 ## Installation
 
@@ -40,7 +40,8 @@ conda deactivate
 
 ### 3. Version Control with Jupyter Notebook
 
-To clear Jupyter Notebook's output and metadata when using git commit, add this to your local .git/config
+To clear Jupyter Notebook's output and metadata when using git commit, 
+add this to your local `.git/config`
 ```bash
 [filter "strip-notebook-output"]
 clean = "nbstripout"
