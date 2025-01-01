@@ -40,7 +40,7 @@ conda deactivate
 
 ### 3. Version Control with Jupyter Notebook
 
-To clear Jupyter Notebook's output and metadata when using git commit add this to your local .git/config
+To clear Jupyter Notebook's output and metadata when using git commit, add this to your local .git/config
 ```bash
 [filter "strip-notebook-output"]
 clean = "nbstripout"
