@@ -479,6 +479,86 @@
 
 \end{frame}
 
+\begin{frame}{Part C: Introduction}
+    
+\end{frame}
+
+\begin{frame}{1. Decision Tree Classifier: Depth versus Accuracy}
+
+    \begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+
+        \column{.45\textwidth} % Left column and width
+        \begin{figure}
+            \centering
+            \includegraphics[width=1.15\linewidth]{out/plot7_DT_accuracy_vs_depth.png}
+            \label{fig:1}
+        \end{figure}
+        
+
+        \column{.45\textwidth} % Right column and width
+        \begin{itemize}
+        \item The accuracy initially increases as the tree depth grows, reaching a peak at a certain depth 
+        (depth 3 in this case).
+        
+        \item Beyond that point, the accuracy declines and stabilizes. This suggests overfitting: deeper 
+        trees memorize the training data but fail to generalize to unseen data.
+        
+        \item The highest accuracy occurs at a relatively shallow depth. This indicates that the 
+        shallower tree offers a balance between bias and variance, leading to better generalization.
+        
+        \end{itemize}
+
+
+    \end{columns}
+
+\end{frame}
+
+\begin{frame}{1. Decision Tree Classifier: Decision Boundaries}
+
+    \begin{figure}
+        \centering
+        \includegraphics[height=0.8\textheight, width=0.8\textwidth, keepaspectratio]{out/plot9_DT_structure.png}
+        \label{fig:1}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}{1. Decision Tree Classifier: Depth versus Accuracy}
+
+    \begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+
+        \column{.45\textwidth} % Left column and width
+        \begin{figure}
+            \centering
+            \includegraphics[width=1.15\linewidth]{out/plot8_DT_decision_boundaries.png}
+            \label{fig:1}
+        \end{figure}
+        
+
+        \column{.45\textwidth} % Right column and width
+        \begin{itemize}
+            \scriptsize
+            \item The model performs well in distinguishing the classes striking a balance between complexity and generalization.
+            \item Decision regions are not too complex memorizing training data, avoiding overfitting.
+            \item The boundaries are axis-aligned due to the nature of Decision Trees 
+            (splits occur along a single feature at each decision point).
+            \item The decision boundaries align with the splits seen in the tree visualization 
+            (the number of horizontal and vertical boundaries are equal to the number of splits that lead to 
+            separation into different class regions).
+            \item The Gini index tends to decrease as we go down the tree, since DT aims to split the data at each 
+            node to maximize class separation (reduce impurity).
+        \end{itemize}
+
+
+    \end{columns}
+
+\end{frame}
+
+\begin{frame}{2. Random Forest: Depth versus Accuracy}
+
+
+\end{frame}
+
 %------------------------------------------------
 
 \begin{frame}{Bullet Points}
