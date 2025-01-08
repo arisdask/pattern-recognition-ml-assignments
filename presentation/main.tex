@@ -479,8 +479,20 @@
 
 \end{frame}
 
-\begin{frame}{Part C: Introduction}
-    
+\begin{frame}{Part C: Intro}
+    \begin{itemize}
+        \item In the first section, we employ a Decision Tree (DT) Classifier to classify points from the Iris dataset 
+        using two features: sepal length and sepal width. We tune the depth of the tree to achieve optimal accuracy,
+        visualizing the decision boundaries and the corresponding tree structure. This allows us to examine how 
+        tree depth influences model performance and decision-making.
+
+        \item In the second section, we explore an ensemble method using a Random Forest (RF) Classifier. 
+        Similar to the DT, we tune the tree depths to achieve optimal performance and visualize the resulting 
+        decision boundaries at the selected depth. We then compare the accuracy of the RF to that of the single DT,
+        analyzing the differences in their decision boundaries. Finally, we investigate the impact of varying the 
+        fraction of the original dataset used for bootstrapping on the RF's accuracy, providing insights into the 
+        robustness and generalization of the ensemble method.
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{1. Decision Tree Classifier: Depth versus Accuracy}
@@ -513,7 +525,7 @@
 
 \end{frame}
 
-\begin{frame}{1. Decision Tree Classifier: Decision Boundaries}
+\begin{frame}{1. Decision Tree Classifier: Structure}
 
     \begin{figure}
         \centering
@@ -523,7 +535,7 @@
 
 \end{frame}
 
-\begin{frame}{1. Decision Tree Classifier: Depth versus Accuracy}
+\begin{frame}{1. Decision Tree Classifier: Decision Boundaries}
 
     \begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
 
@@ -549,16 +561,89 @@
             node to maximize class separation (reduce impurity).
         \end{itemize}
 
-
     \end{columns}
 
 \end{frame}
 
 \begin{frame}{2. Random Forest: Depth versus Accuracy}
 
+    \begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+        \column{.45\textwidth} % Left column and width
+        \begin{figure}
+            \centering
+            \includegraphics[width=1.15\linewidth]{out/plot10_DT_RF_accuracy_vs_depth.png}
+            \label{fig:1}
+        \end{figure}
+        
+
+        \column{.45\textwidth} % Right column and width
+        \begin{itemize}
+            \scriptsize
+            \item The Random Forest (RF) shows higher accuracy compared to the Decision Tree (DT) across all depth values.
+            Averaging predictions of weak learners, such as trees, trained on different datasets leads to reduction of the
+            variance and therefore better accuracy.
+        
+            \item As in the case of DT, the accuracy initially increases as the tree depths grow, 
+            reaching a peak at depth 2.
+        
+            \item Beyond that point, the accuracy drops significantly before stabilizing at higher depths.
+        
+            \item The Random Forest performs better and generalizes more effectively than the Decision Tree, 
+            particularly at higher depths, due to ensemble averaging.
+        \end{itemize}
+
+
+    \end{columns}
+    
+\end{frame}
+
+\begin{frame}{2. Random Forest: Decision Boundaries}
+
+    \begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+        \column{.45\textwidth} % Left column and width
+        \begin{figure}
+            \centering
+            \includegraphics[width=1.15\linewidth]{out/plot11_RF_decision_boundaries.png}
+            \label{fig:1}
+        \end{figure}
+        
+
+        \column{.45\textwidth} % Right column and width
+        \begin{itemize}
+            \item The decision boundaries for RF (depth = 2) appear smoother and more generalized compared 
+            to those of the individual DT (depth = 3). This is a result of the ensemble method 
+            (averaging decisions of multiple trees), which reduces variance and produces more balanced 
+            boundaries.
+
+            \item The decision boundaries accurately reflect the overall structure of the data and 
+            remain robust to the influence of outliers.
+        \end{itemize}
+
+    \end{columns}
 
 \end{frame}
 
+\begin{frame}{3. Random Forest: Accuracy versus $\gamma$}
+
+    \begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+        \column{.45\textwidth} % Left column and width
+        \begin{figure}
+            \centering
+            \includegraphics[width=1.15\linewidth]{out/plot12_RF_accuracy_vs_gamma.png}
+            \label{fig:1}
+        \end{figure}
+        
+
+        \column{.45\textwidth} % Right column and width
+        \begin{itemize}
+            \item At large tree depths, the accuracy decreases as $\gamma$ increases.
+            \item For smaller tree depths, Random Forest models with larger $\gamma$ values tend to outperform those with smaller $\gamma$ values.
+            \item The drop in accuracy from the peak to the stable value is more pronounced for larger $\gamma$ values.
+        \end{itemize}
+        
+
+    \end{columns}
+\end{frame}
 %------------------------------------------------
 
 \begin{frame}{Bullet Points}
