@@ -1,52 +1,60 @@
-## Overview
+# Pattern Recognition & Machine Learning Assignment (ECE AUTH 2024-25)
 
-This is the project assignment for the course Pattern Recognition and Machine Learning of ECE AUTH the year
-2024-25, built with `Python` and `Jupyter Notebook`
+> **Authors:** Aristeidis Daskalopoulos, Georgios Rousomanis.
 
-## Requirements
+This repository contains the assignments for the Pattern Recognition and Machine Learning course at ECE AUTH (2024-25). 
+The project is implemented in Python and Jupyter Notebook, and includes code, datasets, and presentation material. 
+Assignment's details are in `PR_Assignment_2024.pdf`.
 
-Before running the project, make sure you have the following installed:
 
-- `Python 3.9.12` 
-- `Anaconda` (Recommended for Python environments)
+## Repository Structure
 
-## Installation
+- `Team63-AC.ipynb`, `Team63-D.ipynb`: Main Jupyter Notebooks for assignments (Parts A–C and D).
+- `datasetTest.csv`, `datasetTV.csv`: Datasets for training and testing (Part D).
+- `labels63.npy`: Numpy array of resulting labels from Part D code.
+- `environment.yml`: Conda environment specification for reproducibility.
+- `presentation/`: LaTeX source (`main.tex`) and compiled PDF (`presentation.pdf`) for the project presentation.
+- `PR_Assignment_2024.pdf`: Assignment description.
 
-### 1. Clone the Repository
 
-To get started, clone the repository to your local machine:
+## Setup Instructions
 
-```bash
-git clone git@github.com:georrous6/Pattern-Recognition.git
-```
+### 1. Prerequisites
 
-### 2. Set Up Anaconda Environment
+- Python >= 3.9.12
+- Anaconda
 
-Navigate to the directory of the repository
-```bash
-cd Pattern-Recognition
-```
+### 2. Create and Activate the Environment
 
-Create a new Anaconda environment with all the installed requirements along with the appropriate Python version
+Create the environment using the provided `environment.yml`:
+
 ```bash
 conda env create -f environment.yml
-```
-
-Activate the environment
-```bash
 conda activate PRenv
 ```
 
-When you're done working in the environment, you can deactivate it by running
+To deactivate the environment:
+
 ```bash
 conda deactivate
 ```
 
-### 3. Version Control with Jupyter Notebook
+### 3. Run the Notebooks
 
-To clear Jupyter Notebook's output and metadata when using git commit, 
-add this to your local `.git/config`
+Open `Team63-AC.ipynb` or `Team63-D.ipynb` in Jupyter Notebook or VS Code and run the cells to reproduce the analysis and results.
+
+### 4. Presentation
+
+The `presentation/` folder contains the LaTeX source and PDF for the project presentation.
+
+
+## Version Control Tips
+
+To keep Jupyter Notebooks clean in git commits, you can use `nbstripout`:
+
 ```bash
 [filter "strip-notebook-output"]
 clean = "nbstripout"
 ```
+
+Add this to your local `.git/config` to automatically strip output and metadata from notebooks on commit.

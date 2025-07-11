@@ -9,6 +9,6 @@ dependencies:
   - numpy=1.26.4
   - scikit-learn=1.5.2
   - scipy=1.13.1
-  - pip  # Add pip to install pip packages
+  - pip
   - pip:
-      - nbstripout==0.8.1  # pip-specific package
+      - nbstripout==0.8.1
